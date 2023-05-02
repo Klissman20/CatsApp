@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class CatModel(
     @SerializedName("id")
-    var id: Int,
+    var id: String,
     @SerializedName("name")
     var breedName: String,
     @SerializedName("origin")
@@ -13,6 +13,6 @@ data class CatModel(
     var affectionLevel: Int,
     @SerializedName("intelligence")
     var intelligence: Int,
-    @SerializedName("imageUrl")
-    var imageUrl: String
+    @SerializedName("reference_image_id")
+    var imageUrl: String?
 )
