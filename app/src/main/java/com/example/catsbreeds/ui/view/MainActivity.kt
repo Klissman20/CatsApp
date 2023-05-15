@@ -7,7 +7,6 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.catsbreeds.R
 import com.example.catsbreeds.databinding.ActivityMainBinding
 import com.example.catsbreeds.domain.model.Cat
 import com.example.catsbreeds.ui.adapter.CatAdapter
@@ -25,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     var mCats = mutableListOf<Cat>()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             mCats.addAll(it)
             mAdapter.notifyDataSetChanged()
         })
+
         catsViewModel.isLoading.observe(this, Observer {
             binding.progressBar.isVisible = it
         })

@@ -14,5 +14,5 @@ data class CatModel(
     @SerializedName("intelligence")
     var intelligence: Int,
     @SerializedName("reference_image_id")
-    var imageUrl: String?
+    var reference_image_id: String?
 )
